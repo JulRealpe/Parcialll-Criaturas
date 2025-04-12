@@ -3,7 +3,7 @@ public interface Volador {
     void aterrizar();
 }
 
-public interface Magic {
+public interface Magico {
     void lanzarHechizo(Criatura objetivo);
     void aprenderHechizo(String hechizo);
 }
