@@ -8,18 +8,15 @@ public class Mago extends Criatura implements Magico {
         super(nombre, salud, fuerza);
     }
 
-    @Override
     public void atacar(Criatura objetivo) {
         lanzarHechizo(objetivo);
     }
 
-    @Override
     public void defender(int daño) {
         salud -= daño;
         System.out.println(nombre + " recibe " + daño + " de daño. Salud restante: " + salud);
     }
 
-    @Override
     public void lanzarHechizo(Criatura objetivo) {
         int daño = fuerza;
         if (arma != null) {
@@ -30,8 +27,7 @@ public class Mago extends Criatura implements Magico {
         }
         objetivo.defender(daño);
     }
-
-    @Override
+    
     public void aprenderHechizo(String hechizo) {
         hechizos.add(hechizo);
         System.out.println(nombre + " aprendió el hechizo: " + hechizo);
