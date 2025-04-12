@@ -4,7 +4,6 @@ public class Guerrero extends Criatura {
         super(nombre, salud, fuerza);
     }
 
-    @Override
     public void atacar(Criatura objetivo) {
         int daño = fuerza;
         if (arma != null) {
@@ -15,8 +14,7 @@ public class Guerrero extends Criatura {
         }
         objetivo.defender(daño);
     }
-
-    @Override
+    
     public void defender(int daño) {
         salud -= daño;
         System.out.println(nombre + " recibe " + daño + " de daño. Salud restante: " + salud);
